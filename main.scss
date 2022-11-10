@@ -1,0 +1,14 @@
+@import "_variables.scss";
+@import "shared.scss";
+
+.main-container {
+    
+    @media (min-width: 25rem) {
+        display: grid;
+        grid-template-columns: repeat (2, 1fr);
+    }
+    @media (min-width: 40rem) {
+        display: grid;
+        grid-template-columns: repeat (3, 1fr);
+    }
+}
