@@ -65,9 +65,15 @@ dotContainer.addEventListener("click", function (e) {
     const { slide } = e.target.dataset;
     goToSlide(slide);
     activateDot(slide);
+    curSlide = slide;
   }
 });
 
 createDots();
 activateDot(0);
+
+/* slider - automatic roll */
+
+setInterval(nextSlide, 6000);
+
 /* SLIDER - end */
