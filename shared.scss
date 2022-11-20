@@ -11,24 +11,16 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
-  display: grid;
-  grid-template-rows: 3.5rem auto fit-content(6.5rem);
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  height: 100%;
 }
 
 //navigation START
 
 .main-header {
   width: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   background: $main-color;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.2rem;
   z-index: 60;
   display: flex;
   align-items: center;
@@ -37,6 +29,7 @@ body {
   /*smazat, až bude logo*/
   h3 {
     display: inline;
+    margin: 0;
   }
 }
 
@@ -57,7 +50,7 @@ body {
 .toggle-button__bar {
   width: 100%;
   height: 0.2rem;
-  background: $dark-color;
+  background: $secondary-color;
   display: block;
   margin: 0.6rem 0;
 }
@@ -78,10 +71,13 @@ body {
 
 .main-nav__item {
   margin: 0 1rem;
+  &:last-child {
+    margin-right: 0;
+  }
 
   a {
     text-decoration: none;
-    color: $dark-color;
+    color: $secondary-color;
     font-weight: bold;
     padding: 0.2rem 0;
 
@@ -146,6 +142,10 @@ body {
     color: $dark-color;
     font-weight: bold;
     padding: 0.2rem 0;
+    &:hover,
+    &:active {
+      color: $contrast-color;
+    }
   }
 }
 
